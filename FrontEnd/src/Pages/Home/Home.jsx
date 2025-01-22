@@ -9,23 +9,23 @@ import { useContext } from 'react';
 import { favoriteContext } from '../../Context/ContextFavorites';
 
 function Home() {
-  let [searchQuery, setSearchQuery] = useState('')
-const [products,setProducts]=useState([])
+
 let { favorite, setFavorite } = useContext(favoriteContext);
+let [searchQuery, setSearchQuery] = useState('')
+const [products,setProducts]=useState([])
 const [sortOption, setSortOption] = useState('');
 
-function handleAddFavorite(product) {
-  let findFavorite = favorite.find(item => item._id == product._id);
 
-  if (findFavorite) {
-    alert('Bu mehsul wishlistde movcuddur');
-  } else {
-    setFavorite([...favorite, product]);
-    
+function getData(){
+  axios.get("http://localhost:3000/arrivals/")
+  .then((res)=>{
+    setProducts(res.data)
+  })
   }
-}
-
-
+  useEffect(()=>{
+    getData()
+  },[])
+  
 function handleSearch(event) {
   setSearchQuery(event.target.value)
 }
@@ -44,15 +44,18 @@ if (sortOption === 'high-low') return b.price - a.price;
     return 0; 
   });
 
-function getData(){
-axios.get("http://localhost:3000/arrivals/")
-.then((res)=>{
-  setProducts(res.data)
-})
+
+
+function handleAddFavorite(product) {
+  let findFavorite = favorite.find(item => item._id == product._id);
+
+  if (findFavorite) {
+    alert('Bu mehsul wishlistde movcuddur');
+  } else {
+    setFavorite([...favorite, product]);
+    
+  }
 }
-useEffect(()=>{
-  getData()
-},[])
 
   return (
     <div className={style.home}>
