@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.home {
+  .hero {
+    height: 100vh;
+    position: relative;
+    background-color: #f532b8;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    align-items: end;
+    img {
+      padding: 0 1%;
+    }
+    .herotext {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+
+      h2 {
+        color: white;
+        font-size: 50px;
+        font-weight: 300;
+      }
+      h1 {
+        font-size: 60px;
+        color: white;
+      }
+      button {
+        border: none;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px 27px;
+        font-weight: 700;
+        &:hover {
+          background-color: #f41068;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .categori {
+    padding: 3% 20%;
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 1%;
+    }
+    p {
+      color: gray;
+      text-align: center;
+    }
+
+    .aa {
+      margin-top: 4%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      .fimg {
+        display: flex;
+        justify-content: end;
+      }
+    }
+    .ab {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ac {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .man {
+    margin: 4% 0;
+    background-color: #f41068;
+    min-height: 60vh;
+    padding: 2% 20%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.6),
+        rgba(255, 192, 203, 0.6) 100%
+      ),
+      url("https://preview.colorlib.com/theme/shop/img/men-bg.jpg");
+    background-repeat: no-repeat;
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 40px;
+    }
+    p {
+      color: white;
+      text-align: center;
+    }
+    .mancards {
+      margin-top: 4%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      align-items: center;
+      justify-content: center;
+      .mancard {
+        h5 {
+          color: white;
+          font-size: 17px;
+        }
+        span {
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .woman {
+    margin: 4% 0;
+   
+    min-height: 60vh;
+    padding: 2% 20%;
+  .ss{
+    display: flex;
+    gap: 5%;
+  }
+    h1 {
+      color: black;
+      text-align: center;
+      font-size: 40px;
+    }
+    p {
+      color: black;
+      text-align: center;
+    }
+    .cards {
+      margin-top: 4%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .card {
+        position: relative;
+        b{
+            cursor: pointer;
+            top: 10px;
+            right: 10px;
+            position: absolute;
+            color: #f41068;
+        }
+        h5 {
+          color: black;
+          font-size: 17px;
+        }
+        span {
+          color: black;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    img {
+      width: 100% !important;
+    }
+    .herotext {
+      left: 20% !important;
+    }
+  }
+}
+@media screen and (max-width: 465px) {
+  .hero {
+    img {
+      width: 80% !important;
+    }
+    .herotext {
+      h2 {
+        font-size: 30px !important;
+      }
+      h1 {
+        font-size: 40px !important;
+      }
+    }
+  }
+}
