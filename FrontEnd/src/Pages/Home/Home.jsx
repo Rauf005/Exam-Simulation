@@ -38,8 +38,9 @@ const filteredProducts = products
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   )
   .sort((a, b) => {
-    if (sortOption === 'A-Z') return a.price - b.price;
-    if (sortOption === 'Z-A') return b.price - a.price;
+    if (sortOption === 'low-high') return a.price - b.price;
+if (sortOption === 'high-low') return b.price - a.price;
+
     return 0; 
   });
 

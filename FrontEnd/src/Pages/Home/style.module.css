@@ -108,7 +108,11 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       align-items: center;
       justify-content: center;
+      gap:20px;
       .mancard {
+        img{
+          width: 100%;
+        }
         h5 {
           color: white;
           font-size: 17px;
@@ -142,11 +146,14 @@
       margin-top: 4%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
+      gap: 20px;
       align-items: center;
       justify-content: center;
       .card {
         position: relative;
+        img{
+          width: 100%;
+        }
         b{
             cursor: pointer;
             top: 10px;
